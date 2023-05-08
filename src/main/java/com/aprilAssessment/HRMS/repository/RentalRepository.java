@@ -7,8 +7,7 @@ public class RentalRepository extends Database {
 
     public static void addProperty(Property property) {
         try {
-            Database.properties[Database.counter] = property;
-            Database.counter++;
+            Database.properties[Database.counter++] = property;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Database maximum limit reached, kindly delete some records data and try again");
         }

@@ -14,7 +14,9 @@ public class CondoReport extends Database {
         int totalNumberOccupied = 0, totalNumberOfOccupied = 0;
 
         for (Property property : Database.properties) {
-            if (property instanceof Condo) {
+            if (property == null) {
+                break;
+            } else if (property instanceof Condo) {
                 condoCounter++;
                 totalNumberOfBedrooms += property.getNumberOfBedrooms();
                 totalNumberOfBathrooms += property.getNumberOfBathrooms();

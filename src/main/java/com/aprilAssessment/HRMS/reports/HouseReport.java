@@ -14,7 +14,9 @@ public class HouseReport extends Database {
         int totalNumberOccupied = 0, totalNumberOfOccupied = 0;
 
         for (Property property : Database.properties) {
-            if (property instanceof House) {
+            if (property == null) {
+                break;
+            } else if (property instanceof House) {
                 houseCounter++;
                 totalNumberOfBedrooms += property.getNumberOfBedrooms();
                 totalNumberOfBathrooms += property.getNumberOfBathrooms();

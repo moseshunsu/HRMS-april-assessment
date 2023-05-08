@@ -14,7 +14,9 @@ public class ApartmentReport extends Database {
         int totalNumberOccupied = 0, totalNumberOfOccupied = 0;
 
         for (Property property: Database.properties) {
-            if (property instanceof Apartment) {
+            if (property == null) {
+                break;
+            } else if (property instanceof Apartment) {
                 apartmentCounter++;
                 totalNumberOfBedrooms += property.getNumberOfBedrooms();
                 totalNumberOfBathrooms += property.getNumberOfBathrooms();
