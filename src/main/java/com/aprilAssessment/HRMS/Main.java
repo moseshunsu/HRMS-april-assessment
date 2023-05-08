@@ -24,7 +24,6 @@ public class Main {
         RentalRepository.addProperty((new Condo(Location.LAGOS,4, 3,
                 5000, OccupiedStatus.NOT_OCCUPIED, 1, "pool, gym")));
 
-//        ViewRecord.viewAllProperties();
         System.out.println();
         ViewRecord.viewByApartments();
         System.out.println();
@@ -49,9 +48,9 @@ public class Main {
         System.out.println();
         ViewRecord.viewByOccupiedStatus(OccupiedStatus.OCCUPIED);
         System.out.printf("%n%n%n%n%n");
-        UpdateRecord.updateCondo("cOn003").setAmenities("pool test");
         UpdateRecord.updateCondo("cOn003");
-//        UpdateRecord.updateCondoRecord("Apa001").setLocation(Location.ABUJA);
+        UpdateRecord.updateCondo("cOn003").setAmenities("pool, gym, cafeteria");
+        UpdateRecord.updateCondo("cOn003");
         System.out.printf("%n%n%n");
         RentalRepository.deleteProperty("coN002");
         ViewRecord.viewAllProperties();
