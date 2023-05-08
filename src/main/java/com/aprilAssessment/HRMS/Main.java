@@ -60,6 +60,8 @@ public class Main {
                 2, 2000, OccupiedStatus.NOT_OCCUPIED, 3));
         RentalRepository.addProperty(new Apartment(Location.PORT_HARCOURT, 5,
                 2, 2000, OccupiedStatus.NOT_OCCUPIED, 3));
+        RentalRepository.addProperty(new Apartment(Location.PORT_HARCOURT, 5,
+                2, 2000, OccupiedStatus.NOT_OCCUPIED, 3));
         System.out.printf("%n%n%n");
         ViewRecord.viewAllProperties();
         System.out.printf("%n%n%n");
