@@ -6,14 +6,10 @@ import com.aprilAssessment.HRMS.entity.Property;
 public class RentalRepository extends Database {
 
     public static void addProperty(Property property) {
-        try {
             if (Database.counter < Database.properties.length) {
                 Database.properties[Database.counter++] = property;
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Database maximum limit reached, kindly delete some records data and try again");
+            } else System.out.println("Database maximum limit reached, kindly delete some records data and try again");
         }
-    }
 
     public static void deleteProperty(String propertyCode) {
         for (int i = 0; i < Database.counter; i++) {
